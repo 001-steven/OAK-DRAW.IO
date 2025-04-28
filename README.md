@@ -1,1 +1,12 @@
-# OAK-DRAW.IO
+# Nama : Moh. Yusril
+# Nim : 09011382429124
+# kelas : SKU2B
+
+![Screenshot 2025-04-28 140931](https://github.com/user-attachments/assets/913f00c3-0816-44ca-8992-07961bdf3e72)
+
+## Arsitektur Symmetric Multiprocessing (SMP)
+
+Diagram yang disajikan mengilustrasikan arsitektur Symmetric Multiprocessing (SMP), sebuah desain sistem komputasi yang mengoptimalkan kinerja melalui penggunaan beberapa prosesor identik. Sistem ini terdiri dari empat unit pemrosesan (CPU) yang masing-masing beroperasi pada kecepatan 3.2 GHz, semuanya terhubung ke pengontrol memori pusat yang mengimplementasikan akses memori terpadu (UMA). Pengontrol memori ini berfungsi sebagai jembatan kritis, memfasilitasi komunikasi antara CPU dan komponen memori sistem, termasuk memori utama berkapasitas 64GB DDR5 dan empat cache L3 masing-masing 16MB.
+Dalam arsitektur ini, data mengalir dari CPU ke pengontrol memori melalui jalur komunikasi berkecepatan tinggi yang digambarkan dengan garis putus-putus biru. Pengontrol memori kemudian mendistribusikan dan mengatur aliran data antara prosesor dan komponen memori melalui koneksi yang ditandai dengan garis putus-putus ungu. Cache L3 berperan penting sebagai penyimpanan sementara berkecepatan tinggi yang mengurangi latensi dengan menyimpan data yang sering diakses, sehingga menjembatani kesenjangan kinerja antara CPU yang cepat dan memori utama yang relatif lebih lambat.
+Sistem input/output diimplementasikan melalui Port System, sebuah interkoneksi berkecepatan tinggi yang menghubungkan cache memori dengan perangkat penyimpanan dan jaringan. Port System ini memungkinkan komunikasi yang efisien antara subsistem memori dan perangkat eksternal, dengan garis putus-putus hijau menunjukkan jalur dari cache dan garis merah menghubungkannya ke penyimpanan NVMe SSD dan antarmuka jaringan Ethernet 10Gbps. Desain hierarkis ini memaksimalkan throughput data dan meminimalkan bottleneck, sangat penting untuk aplikasi yang membutuhkan pemrosesan paralel dan akses memori intensif.
+Arsitektur SMP ini memiliki empat karakteristik utama yang disorot dalam diagram: memori bersama yang memungkinkan semua prosesor mengakses ruang memori yang sama, desain UMA yang menjamin waktu akses memori yang seragam untuk semua prosesor, koherensi cache yang memastikan konsistensi data di seluruh subsistem memori, dan infrastruktur berbasis bus yang memfasilitasi komunikasi yang terorganisir antar komponen. Dengan fitur-fitur ini, arsitektur SMP memberikan solusi yang seimbang dan efisien untuk komputasi paralel dalam server performa tinggi, workstation, dan sistem database yang memerlukan pemrosesan data simultan dan responsif.
